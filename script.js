@@ -1,7 +1,20 @@
 // const btn = document.querySelector(".btn");
-
 // btn.addEventListener("click", (e) => {
+//   e = window.screenY;
 //   console.log(e);
+// });
+// // When the user clicks on the button, scroll to the top of the document
+// mybutton.addEventListener("click", () =>{
+// 	window.scroll(0,0);
+// });
+// html{
+// scrol-behavior: smooth;
+// }
+// ///////// scroll top timeoutfunction
+// btn.addEventListener("click", () => {
+//   setTimeout(function () {
+//     window.scroll(0, 0);
+//   }, 300);
 // });
 
 /* ==Menu Show== */
@@ -32,7 +45,7 @@ navlink.forEach((n) => n.addEventListener("click", linkAction));
 /* == Active Link == */
 
 const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll, scrollActive");
+window.addEventListener("scroll, scrollActive"); //"scroll, scrollActive"
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
