@@ -10,16 +10,24 @@
 // html{
 // scrol-behavior: smooth;
 // }
-// ///////// scroll top timeoutfunction
+// ///////// scroll top timeoutfunction  // btn.addEventListener("click", top => {
 // btn.addEventListener("click", () => {
 //   setTimeout(function () {
 //     window.scroll(0, 0);
 //   }, 300);
 // });
 
+// btn.addEventListener("click", top);
+
+// function top() {
+//   setTimeout(function () {
+//     window.scroll(0, 0);
+//   }, 300);
+// }
+
 /* ==Menu Show== */
 
-const showMenu = (toggleId, navId) => {
+function showMenu(toggleId, navId) {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
 
@@ -28,7 +36,7 @@ const showMenu = (toggleId, navId) => {
       nav.classList.toggle("show");
     });
   }
-};
+}
 
 showMenu("nav-toggle", "nav-menu");
 
@@ -45,7 +53,7 @@ navlink.forEach((n) => n.addEventListener("click", linkAction));
 /* == Active Link == */
 
 const sections = document.querySelectorAll("section[id]");
-window.addEventListener("scroll, scrollActive"); //"scroll, scrollActive"
+window.addEventListener("scroll", scrollActive); //"scroll, scrollActive"
 
 function scrollActive() {
   const scrollY = window.pageYOffset;
@@ -69,8 +77,31 @@ function scrollActive() {
 
 /* ==Change Color Header== */
 
-window.onscroll = () => {
-  const nav = document.getElementById("header");
-  if (this.scrollY >= 200) nav.classList.add("scroll-header");
-  else nav.classList.remove("scroll-header");
-};
+// window.onscroll = () => {
+//   const nav = document.getElementById("header");
+//   if (this.scrollY >= 20) nav.classList.add("scroll-header");
+//   else nav.classList.remove("scroll-header");
+// };
+// change the nav color on scroll
+// window.onscroll = () => {
+//   const nav = document.querySelector(".nav");
+//   if (this.scrollY >= 200) nav.classList.add("scroll-header");
+//   else nav.classList.remove("scroll-header");
+// };
+
+/* ==Preloader== */
+
+const loader = document.querySelector(".preloader");
+const hero = document.querySelector(".hero");
+
+function init() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+
+    hero.style.display = "block";
+    setTimeout(() => (hero.style.opacity = 1), 50);
+  }, 1200);
+}
+
+init();
