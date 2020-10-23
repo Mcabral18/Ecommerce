@@ -82,11 +82,19 @@ function scrollActive() {
 //   if (this.scrollY >= 20) nav.classList.add("scroll-header");
 //   else nav.classList.remove("scroll-header");
 // };
+
 // change the nav color on scroll
 // window.onscroll = () => {
 //   const nav = document.querySelector(".nav");
-//   if (this.scrollY >= 200) nav.classList.add("scroll-header");
+//   if (this.scrollY >= 100) nav.classList.add("scroll-header");
 //   else nav.classList.remove("scroll-header");
+// };
+
+// adapt to change the background of responsive nav
+// window.onscroll = () => {
+//   const background = document.querySelector(".show");
+//   if (this.scrollY >= 200) background.classList.add("scroll-back");
+//   else background.classList.remove("scroll-back");
 // };
 
 /* ==Preloader== */

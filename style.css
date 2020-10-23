@@ -234,6 +234,15 @@ header{
     color: var(--dark-color-lighten);
 }
 
+.nav__toggle:hover{
+    transition: all .2s ease-in;
+    transform: scale(1.4);
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+}
+
 .nav__shop{
     font-size: 1.3rem;
     cursor: pointer;
@@ -288,6 +297,11 @@ header{
     z-index: 1;
 }
 
+/* .scroll-back{
+    background-color: var(--dark-color-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+    z-index: 1;
+} */
 
 .header-banner{
     position: absolute;
