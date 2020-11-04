@@ -113,3 +113,52 @@ function init() {
 }
 
 init();
+
+/* ==PopUp login== */
+
+window.onload = () => {
+  const popup_btns = document.querySelectorAll(".popup-button");
+
+  popup_btns.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const target = e.target.dataset.target;
+
+      const popup_el = document.querySelector(target);
+      if (popup_el != null) {
+        popup_el.classList.toggle("is-active");
+      }
+    });
+  });
+};
+
+/* ==Tabs Login== */
+("use strict");
+
+function Tabs() {
+  var bindAll = function () {
+    var menuElements = document.querySelectorAll("[data-tab]");
+    for (var i = 0; i < menuElements.length; i++) {
+      menuElements[i].addEventListener("click", change, false);
+    }
+  };
+
+  var clear = function () {
+    var menuElements = document.querySelectorAll("[data-tab]");
+    for (var i = 0; i < menuElements.length; i++) {
+      menuElements[i].classList.remove("activ");
+      var id = menuElements[i].getAttribute("data-tab");
+      document.getElementById(id).classList.remove("activ");
+    }
+  };
+
+  var change = function (e) {
+    clear();
+    e.target.classList.add("activ");
+    var id = e.currentTarget.getAttribute("data-tab");
+    document.getElementById(id).classList.add("activ");
+  };
+
+  bindAll();
+}
+
+var connectTabs = new Tabs();
