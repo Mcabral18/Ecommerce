@@ -178,19 +178,19 @@ header {
     background-size: cover;
     animation: breath 5s ease-in-out infinite;
 }
-/*
+
 @keyframes breath {
     0%{
-        background-size: 100%;
+        background-size: 180vh;
     }
     50%{
-        background-size: 110%;
+        background-size: 200vh;
     }
     100%{
-        background-size: 100%;
+        background-size: 180vh;
     }
 }
-*/
+
 
 /* ==Navbar== */
 
